@@ -100,5 +100,17 @@
   <ItemGroup>
     <Resource Include="assets\basketball.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\13_heat.png" />
+    <Resource Include="assets\14_heat.png" />
+    <Resource Include="assets\14_lakers.png" />
+    <Resource Include="assets\22_heat.png" />
+    <Resource Include="assets\23_lakers.png" />
+    <Resource Include="assets\39_lakers.png" />
+    <Resource Include="assets\3_lakers.png" />
+    <Resource Include="assets\7_heat.png" />
+    <Resource Include="assets\99_heat.png" />
+    <Resource Include="assets\9_lakers.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
