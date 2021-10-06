@@ -6,8 +6,83 @@
         xmlns:local="clr-namespace:EquiposNBA"
         mc:Ignorable="d"
         Icon="assets/basketball.ico"
-        Title="Equipos NBA" Height="450" Width="800">
+        Title="Equipos NBA"
+        Height="450"
+        Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Border HorizontalAlignment="Center"
+                    BorderBrush="Black"
+                    BorderThickness="3"
+                    Margin="10"
+                    CornerRadius="3">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
+                    <StackPanel.Background>
+                        <LinearGradientBrush EndPoint="0.5,1"
+                                             StartPoint="0.5,0">
+                            <GradientStop Color="#FF6E12DC"
+                                          Offset="0.056" />
+                            <GradientStop Color="#FFF1D107"
+                                          Offset="0.976" />
+                        </LinearGradientBrush>
+                    </StackPanel.Background>
+                    <TextBlock Text="Los ángeles Lakers"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               Foreground="Black"></TextBlock>
+                    <WrapPanel>
+                        <Image Source="assets/14_lakers.png"
+                               Width="150"></Image>
+                        <Image Source="assets/23_lakers.png"
+                               Width="150"></Image>
+                        <Image Source="assets/39_lakers.png"
+                               Width="150"></Image>
+                        <Image Source="assets/9_lakers.png"
+                               Width="150"></Image>
+                        <Image Source="assets/3_lakers.png"
+                               Width="150"></Image>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+            <Border HorizontalAlignment="Center"
+                    BorderBrush="#FF050506"
+                    BorderThickness="3"
+                    Margin="10"
+                    CornerRadius="3">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <StackPanel.Background>
+                        <LinearGradientBrush EndPoint="0.5,1"
+                                             StartPoint="0.5,0">
+                            <GradientStop Color="Black"
+                                          Offset="0" />
+                            <GradientStop Color="#FFE01515"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </StackPanel.Background>
+                    <TextBlock  TextWrapping="Wrap"
+                                HorizontalAlignment="Center"
+                                Text="Miami Heat"
+                                FontWeight="Bold"
+                                FontSize="30"
+                                Foreground="White"></TextBlock>
+                    <WrapPanel>
+                        <Image Source="assets/13_heat.png"
+                               Width="150"></Image>
+                        <Image Source="assets/14_heat.png"
+                               Width="150"></Image>
+                        <Image Source="assets/22_heat.png"
+                               Width="150"></Image>
+                        <Image Source="assets/7_heat.png"
+                               Width="150"></Image>
+                        <Image Source="assets/99_heat.png"
+                               Width="150"></Image>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
 </Window>
