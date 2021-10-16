@@ -9,80 +9,130 @@
         Title="Equipos NBA"
         Height="450"
         Width="800">
-    <Grid>
-        <StackPanel>
-            <Border HorizontalAlignment="Center"
-                    BorderBrush="Black"
-                    BorderThickness="3"
-                    Margin="10"
-                    CornerRadius="3">
-                <StackPanel HorizontalAlignment="Center"
-                            VerticalAlignment="Top">
-                    <StackPanel.Background>
-                        <LinearGradientBrush EndPoint="0.5,1"
-                                             StartPoint="0.5,0">
-                            <GradientStop Color="#FF6E12DC"
-                                          Offset="0.056" />
-                            <GradientStop Color="#FFF1D107"
-                                          Offset="0.976" />
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock Text="Los ángeles Lakers"
-                               HorizontalAlignment="Center"
-                               TextWrapping="Wrap"
-                               FontSize="30"
-                               FontWeight="Bold"
-                               Foreground="Black"></TextBlock>
-                    <WrapPanel>
-                        <Image Source="assets/14_lakers.png"
-                               Width="150"></Image>
-                        <Image Source="assets/23_lakers.png"
-                               Width="150"></Image>
-                        <Image Source="assets/39_lakers.png"
-                               Width="150"></Image>
-                        <Image Source="assets/9_lakers.png"
-                               Width="150"></Image>
-                        <Image Source="assets/3_lakers.png"
-                               Width="150"></Image>
-                    </WrapPanel>
-                </StackPanel>
-            </Border>
-            <Border HorizontalAlignment="Center"
-                    BorderBrush="#FF050506"
-                    BorderThickness="3"
-                    Margin="10"
-                    CornerRadius="3">
-                <StackPanel HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-                    <StackPanel.Background>
-                        <LinearGradientBrush EndPoint="0.5,1"
-                                             StartPoint="0.5,0">
-                            <GradientStop Color="Black"
-                                          Offset="0" />
-                            <GradientStop Color="#FFE01515"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock  TextWrapping="Wrap"
-                                HorizontalAlignment="Center"
-                                Text="Miami Heat"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                Foreground="White"></TextBlock>
-                    <WrapPanel>
-                        <Image Source="assets/13_heat.png"
-                               Width="150"></Image>
-                        <Image Source="assets/14_heat.png"
-                               Width="150"></Image>
-                        <Image Source="assets/22_heat.png"
-                               Width="150"></Image>
-                        <Image Source="assets/7_heat.png"
-                               Width="150"></Image>
-                        <Image Source="assets/99_heat.png"
-                               Width="150"></Image>
-                    </WrapPanel>
-                </StackPanel>
-            </Border>
-        </StackPanel>
-    </Grid>
+    <Window.Resources>
+        <!-- Imágenes-->
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width"
+                    Value="150">
+            </Setter>
+        </Style>
+        <!--bordes-->
+        <Style TargetType="{x:Type Border}"
+               x:Key="bordes">
+            <Setter Property="HorizontalAlignment"
+                    Value="Center">
+            </Setter>
+            <Setter Property="BorderBrush"
+                    Value="Black"></Setter>
+            <Setter Property="BorderThickness"
+                    Value="3"></Setter>
+            <Setter Property="Margin"
+                    Value="10"></Setter>
+            <Setter Property="CornerRadius"
+                    Value="3"></Setter>
+        </Style>
+
+        <!--Texto-->
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment"
+                    Value="Center">
+            </Setter>
+            <Setter Property="TextWrapping"
+                    Value="Wrap">
+            </Setter>
+            <Setter Property="FontSize"
+                    Value="30">
+            </Setter>
+            <Setter Property="FontWeight"
+                    Value="Bold">
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}"
+               BasedOn="{StaticResource {x:Type TextBlock}}"
+               x:Key="Lakers">
+            <Setter Property="Foreground"
+                    Value="Black">
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}"
+               BasedOn="{StaticResource {x:Type TextBlock}}"
+               x:Key="Miami">
+            <Setter Property="Foreground"
+                    Value="White">
+            </Setter>
+        </Style>
+        <!-- Stack-->
+        <Style TargetType="{x:Type StackPanel}">
+            <Setter Property="HorizontalAlignment"
+                    Value="center"></Setter>
+        </Style>
+        <!-- Degradado Lakers-->
+        <Style TargetType="{x:Type StackPanel}"
+               x:Key="StackLakers">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+                        <GradientStop Color="#FF6E12DC"
+                                      Offset="0.056" />
+                        <GradientStop Color="#FFF1D107"
+                                      Offset="0.976" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Degradado Miami-->
+        <Style TargetType="{x:Type StackPanel}"
+               x:Key="StackMiami">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+                        <GradientStop Color="Black"
+                                      Offset="0" />
+                        <GradientStop Color="#FFE01515"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <Border Style="{StaticResource bordes}">
+            <StackPanel VerticalAlignment="Top"
+                        Style="{StaticResource StackLakers}">
+                <TextBlock Style="{StaticResource Lakers}"
+                           Text="Los ángeles Lakers"></TextBlock>
+                <WrapPanel>
+                    <Image Source="assets/14_lakers.png"></Image>
+                    <Image Source="assets/23_lakers.png"></Image>
+                    <Image Source="assets/39_lakers.png"></Image>
+                    <Image Source="assets/9_lakers.png"></Image>
+                    <Image Source="assets/3_lakers.png"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+        <Border Style="{StaticResource bordes}">
+            <StackPanel VerticalAlignment="Center"
+                        Style="{StaticResource StackMiami}">
+                <TextBlock Style="{StaticResource Miami}"
+                           Text="Miami Heat"></TextBlock>
+                <WrapPanel>
+                    <Image Source="assets/13_heat.png"
+                           Width="150"></Image>
+                    <Image Source="assets/14_heat.png"
+                           Width="150"></Image>
+                    <Image Source="assets/22_heat.png"
+                           Width="150"></Image>
+                    <Image Source="assets/7_heat.png"
+                           Width="150"></Image>
+                    <Image Source="assets/99_heat.png"
+                           Width="150"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+
 </Window>
