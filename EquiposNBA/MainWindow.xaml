@@ -120,16 +120,11 @@
                 <TextBlock Style="{StaticResource Miami}"
                            Text="Miami Heat"></TextBlock>
                 <WrapPanel>
-                    <Image Source="assets/13_heat.png"
-                           Width="150"></Image>
-                    <Image Source="assets/14_heat.png"
-                           Width="150"></Image>
-                    <Image Source="assets/22_heat.png"
-                           Width="150"></Image>
-                    <Image Source="assets/7_heat.png"
-                           Width="150"></Image>
-                    <Image Source="assets/99_heat.png"
-                           Width="150"></Image>
+                    <Image Source="assets/13_heat.png"></Image>
+                    <Image Source="assets/14_heat.png"></Image>
+                    <Image Source="assets/22_heat.png"></Image>
+                    <Image Source="assets/7_heat.png"></Image>
+                    <Image Source="assets/99_heat.png"></Image>
                 </WrapPanel>
             </StackPanel>
         </Border>
